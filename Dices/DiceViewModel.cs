@@ -21,7 +21,7 @@ namespace Dices
             Players.Add(new UserInfo() { Name = "Player3" });
             Players.Add(new UserInfo() { Name = "Player4" });
             SelectedPlayer = Players[0];
-
+            TwoResult = new TwoDicesResult();
             MyRand = new Random();
         }
 
@@ -90,6 +90,10 @@ namespace Dices
 
         private void Metoda()
         {
+            int a = MyRand.Next(1, 7);
+            int b = MyRand.Next(1, 7);
+            TwoResult.First = (DiceResult) a;
+            TwoResult.Second =(DiceResult) b;
         }
 
         public System.Windows.Input.ICommand ThrowDicesForSelectedPlayerCommand
