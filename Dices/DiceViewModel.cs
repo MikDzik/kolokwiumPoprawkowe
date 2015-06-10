@@ -94,6 +94,7 @@ namespace Dices
             int b = MyRand.Next(1, 7);
             TwoResult.First = (DiceResult) a;
             TwoResult.Second =(DiceResult) b;
+            RaisePropertyChanged();
         }
 
         public System.Windows.Input.ICommand ThrowDicesForSelectedPlayerCommand
